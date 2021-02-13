@@ -2,7 +2,7 @@
 Send an E-mail with python.
 
   This repositori about for send E-mail with smtplib libary. You can send E-mail with python for message,text,file,image,html,hyperlink datas.
-You can see message,html and text mail examples in the mail.py file. 
+You can see `message`,`html` and `text` mail examples in the mail.py file. Look at the Urls for image,file and other file operations.
 
 # More Information
     https://docs.python.org/3/library/email.html#module-email
