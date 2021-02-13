@@ -1,9 +1,11 @@
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText # for text - html- hyperlink message
-from email.mime.image import MIMEImage # for image 
 import sys
 
+#more informations for  send image or other file operations 
+#More information:  https://docs.python.org/3/library/email.html#module-email
+# Examples: https://docs.python.org/3/library/email.examples.html
 #----------------------------------------------------------------------------------------------
 ''' Connect Gmail Email Server '''
 try:
@@ -44,13 +46,12 @@ except Exception as error:
 ''' Sen a HTML and Hyperlink '''
 try:
 
-    body = """
-    Hello World !
-    """
+    # The html content you want 
+    body = f'<a href="www.instagram.com/emre_mentese"> MyProfile </a>'
 
+    #Don't forget "html" string !
     body_text = MIMEText(body, "html")
     mail.attach(body_text)
-
     mailserver.sendmail(mail["sender"], mail["receiver"], mail.as_string())
     print("Mail has been successfully sent. ")
     mailserver.close()
@@ -59,10 +60,3 @@ except Exception as error:
     print(error)
 
 #----------------------------------------------------------------------------------------------
-''' Send an Image '''
-try:
-    pass
-
-except Exception as error:
-    print(error)
-
